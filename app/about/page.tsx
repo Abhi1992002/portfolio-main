@@ -26,12 +26,12 @@ const AboutPage = ({}: AboutPageProps) => {
           quantity={300}
         />
         {/* main page */}
-        <div className="w-full mt-24 px-10 flex items-center flex-col relative pb-20">
+        <div className="w-full mt-24  sm:px-10 flex items-center flex-col relative pb-20">
           <div className="flex">
             <Title title="About" />
           </div>
 
-          <div className=" w-[90%] animate-fade-in mt-[55px]">
+          <div className=" sm:w-[90%] w-[95%] animate-fade-in mt-[55px]">
             <AboutContent />
             <h1 className="text-7xl font-bold text-white text-center mt-8 filter grayscale">
               ✌🏻
@@ -44,17 +44,7 @@ const AboutPage = ({}: AboutPageProps) => {
           <h1 className="z-10 text-5xl text-white cursor-default ">
             My Skills
           </h1>
-
           <Skills />
-          <div className="absolute bottom-0 -left-14 2xl:left-0 w-[500px] h-[500px] animate-fade-in">
-            <Meteors number={10} />
-            <Image
-              src={"/kid.png"}
-              alt="kid image"
-              fill
-              className=" transition-all duration-300 ease-in-out"
-            />
-          </div>
         </div>
       </div>
     </div>

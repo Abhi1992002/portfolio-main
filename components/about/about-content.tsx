@@ -4,7 +4,7 @@ type AboutContentProps = {};
 
 export const AboutContent = ({}: AboutContentProps) => {
   return (
-    <div className="text-center text-xl text-white/70 space-y-4">
+    <div className="text-center text-sm sm:text-base lg:text-xl text-white/70 space-y-4">
       <p>
         Hello! My name is <span className="text-white">Abhimanyu, </span> and
         I'm currently navigating my way through a Bachelor of{" "}

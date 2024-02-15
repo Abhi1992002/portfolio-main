@@ -1,6 +1,7 @@
 "use client";
 import { PinContainer } from "@/components/contact/3d-pin";
 import { ContactCard } from "@/components/contact/contact-card";
+import { ContactCardMobile } from "@/components/contact/contact-card-mobile";
 import { Meteors } from "@/components/meteors";
 import { Navbar } from "@/components/navbar";
 import Particles from "@/components/particles";
@@ -33,7 +34,7 @@ const Contact = ({}: ContactProps) => {
     },
   ];
   return (
-    <div className="h-screen w-screen flex flex-col items-center pt-24 relative">
+    <div className="h-screen w-screen overflow-x-hidden flex flex-col items-center pt-24 relative">
       <div className="w-full fixed top-0 bg-black/50 z-[102] p-8  backdrop-blur-xl ">
         <Navbar />
       </div>
@@ -48,9 +49,15 @@ const Contact = ({}: ContactProps) => {
         <Title title="Contact" />
       </div>
       {/* cards */}
-      <div className="grid w-[100%] grid-cols-1 gap-8 mx-auto  sm:mt-0 lg:grid-cols-3 lg:gap-16 h-[400px] animate-fade-in">
+      <div className=" w-[100%] grid-cols-1 gap-8 mx-auto  sm:mt-0 lg:grid-cols-3 lg:gap-16 h-[400px] animate-fade-in hidden xl:grid">
         {socials.map((s, i) => (
           <ContactCard s={s} key={i} />
+        ))}
+      </div>
+
+      <div className=" w-[95%] grid-cols-1 gap-8 mx-auto  sm:mt-0 lg:grid-cols-3 lg:gap-16  animate-fade-in grid xl:hidden pb-20">
+        {socials.map((s, i) => (
+          <ContactCardMobile s={s} key={i} />
         ))}
       </div>
     </div>

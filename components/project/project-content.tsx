@@ -4,6 +4,7 @@ import Link from "next/link";
 import { FaEye } from "react-icons/fa";
 import { Article } from "./article";
 import { sorted, top1, top2, top3 } from "@/data/projects";
+import { ArticleSmall } from "./article-small";
 
 type ProjectContentProps = {};
 
@@ -13,55 +14,22 @@ export const ProjectContent = ({}: ProjectContentProps) => {
       {/* top section */}
       <div className="grid grid-cols-1 gap-8 mx-auto lg:grid-cols-2  bg-black">
         <Card>
-          <Link href={`/projects`}>
-            <article className="relative w-full h-full p-4 md:p-8">
-              <div className="flex items-center justify-between gap-2">
-                <div className="text-xs text-zinc-100">
-                  <span>SOON</span>
-                </div>
-                <span className="flex items-center gap-1 text-xs text-zinc-500">
-                  <FaEye className="w-4 h-4" />{" "}
-                </span>
-              </div>
-
-              <h2
-                id="featured-post"
-                className="mt-4 text-3xl font-bold text-zinc-100 group-hover:text-white sm:text-4xl font-display"
-              >
-                {top1.title}
-              </h2>
-              <p className="mt-4 leading-8 duration-150 text-zinc-400 group-hover:text-zinc-300">
-                {top1.description}
-              </p>
-              <div className="absolute bottom-4 md:bottom-8">
-                <p className="hidden text-zinc-200 hover:text-zinc-50 lg:block">
-                  Read more <span aria-hidden="true">&rarr;</span>
-                </p>
-              </div>
-            </article>
-          </Link>
+          <div className="xl:block hidden">
+            <Article project={top1} />
+          </div>
+          <div className="xl:hidden block">
+            <ArticleSmall project={top1} />
+          </div>
         </Card>
         <div className="flex flex-col w-full gap-8 mx-auto border-t border-gray-900/10 lg:mx-0 lg:border-t-0 ">
           {[top2, top3].map((project) => (
             <Card key={project.slug}>
-              <Link href={`/projects/${project.slug}`}>
-                <article className="p-4 md:p-8">
-                  <div className="flex justify-between gap-2 items-center">
-                    <span className="text-xs duration-1000 text-zinc-200 group-hover:text-white group-hover:border-zinc-200 drop-shadow-orange">
-                      <span>SOON</span>
-                    </span>
-                    <span className="text-zinc-500 text-xs  flex items-center gap-1">
-                      <FaEye className="w-4 h-4" />{" "}
-                    </span>
-                  </div>
-                  <h2 className="z-20 text-xl font-medium duration-1000 lg:text-3xl text-zinc-200 group-hover:text-white font-display">
-                    {project.title}
-                  </h2>
-                  <p className="z-20 mt-4 text-sm  duration-1000 text-zinc-400 group-hover:text-zinc-200">
-                    {project.description}
-                  </p>
-                </article>
-              </Link>
+              <div className="xl:block hidden">
+                <Article project={project} />
+              </div>
+              <div className="xl:hidden block">
+                <ArticleSmall project={project} />
+              </div>
             </Card>
           ))}
         </div>
@@ -79,7 +47,12 @@ export const ProjectContent = ({}: ProjectContentProps) => {
               .filter((_, i) => i % 3 === 0)
               .map((project) => (
                 <Card key={project.slug}>
-                  <Article project={project} views={13} />
+                  <div className="xl:block hidden">
+                    <Article project={project} />
+                  </div>
+                  <div className="xl:hidden block">
+                    <ArticleSmall project={project} />
+                  </div>
                 </Card>
               ))}
           </div>
@@ -88,7 +61,12 @@ export const ProjectContent = ({}: ProjectContentProps) => {
               .filter((_, i) => i % 3 === 1)
               .map((project) => (
                 <Card key={project.slug}>
-                  <Article project={project} views={2} />
+                  <div className="xl:block hidden">
+                    <Article project={project} />
+                  </div>
+                  <div className="xl:hidden block">
+                    <ArticleSmall project={project} />
+                  </div>
                 </Card>
               ))}
           </div>
@@ -97,7 +75,12 @@ export const ProjectContent = ({}: ProjectContentProps) => {
               .filter((_, i) => i % 3 === 2)
               .map((project) => (
                 <Card key={project.slug}>
-                  <Article project={project} views={10} />
+                  <div className="xl:block hidden">
+                    <Article project={project} />
+                  </div>
+                  <div className="xl:hidden block">
+                    <ArticleSmall project={project} />
+                  </div>
                 </Card>
               ))}
           </div>

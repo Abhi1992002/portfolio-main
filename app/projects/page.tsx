@@ -46,7 +46,7 @@ const ProjectPage = ({}: ProjectPageProps) => {
           ]}
         />
       </div>
-      <div className="w-screen pb-20 bg-black border-t relative pt-[20px] xl:pt-0">
+      <div className="w-screen pb-20 bg-black border-t relative pt-[20px] xl:pt-0 animate-fade-in">
         <ProjectContent />
       </div>
     </div>

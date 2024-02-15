@@ -49,10 +49,10 @@ type SkillsProps = {};
 export const Skills = ({}: SkillsProps) => {
   return (
     <div className="w-full flex justify-center  pb-20 relative">
-      <div className="w-[80%] my-24">
+      <div className="w-[95%] sm:w-[80%] my-24">
         <div className="p-2 flex flex-col justify-start items-center">
           <h1 className=" text-xl">Frontend</h1>
-          <div className="flex pt-4 gap-4 flex-wrap justify-center">
+          <div className="flex pt-4 gap-2 sm:gap-4 flex-wrap justify-center">
             <SkillBox Icon={FaReact} />
             <SkillBox Icon={TbBrandNextjs} />
             <SkillBox Icon={SiRemix} />
