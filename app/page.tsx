@@ -12,7 +12,7 @@ export default function Home() {
       <div className="w-full absolute top-8 z-[100]">
         <Navbar />
         <div className="text-xs mt-2 text-center text-white/60 xl:hidden">
-          Use big screen for fully immersive screen
+          Use big screen for fully immersive experience
         </div>
       </div>
 
