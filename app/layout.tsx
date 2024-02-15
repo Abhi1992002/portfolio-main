@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Iceland, Inter, Michroma, Orbitron, Space_Grotesk } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
+import { Provider } from "@/components/providers";
 
 const inter = Inter({ subsets: ["latin"] });
 const orb = Orbitron({ subsets: ["latin"] })
@@ -20,8 +21,11 @@ export default function RootLayout({
 
   return (
     <html lang="en">
-      <body className={`${space.className} h-screen w-screen overflow-hidden`}>
-        {children}</body>
+      <body className={`${space.className} w-screen overflow-x-hidden scroller`}>
+        <Provider>
+        {children}
+        </Provider>
+       </body>
     </html>
   );
 }

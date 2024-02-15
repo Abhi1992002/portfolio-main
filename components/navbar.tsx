@@ -1,15 +1,21 @@
+"use client";
+import { cn } from "@/lib/cn";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import React, { useEffect, useState } from "react";
 
 type NavbarProps = {};
 
 export const Navbar = ({}: NavbarProps) => {
   const navigation = [
+    { name: "Home", href: "/" },
     { name: "Projects", href: "/projects" },
     { name: "About", href: "/about" },
-    { name: "Skills", href: "/skills" },
     { name: "Contact", href: "/contact" },
   ];
+
+  const pathname = usePathname();
+  const page = pathname.split("/")[1];
   return (
     <>
       <nav className=" animate-fade-in">
@@ -18,7 +24,10 @@ export const Navbar = ({}: NavbarProps) => {
             <Link
               key={item.href}
               href={item.href}
-              className="text-sm duration-500 text-zinc-500 hover:text-zinc-300"
+              className={cn(
+                "text-sm duration-500 text-zinc-500 hover:text-white",
+                "/" + page === item.href && "text-white"
+              )}
             >
               {item.name}
             </Link>
