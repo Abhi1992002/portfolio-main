@@ -16,19 +16,19 @@ const Contact = ({}: ContactProps) => {
   const socials = [
     {
       icon: FaGithub,
-      href: "https://github.com",
+      href: "https://github.com/Abhi1992002",
       handle: "@abhi1992002",
       label: "Github",
     },
     {
       icon: RiTwitterXFill,
-      href: "https://x.com",
+      href: "https://twitter.com/abhiY2045",
       handle: "abhi1992002",
       label: "X",
     },
     {
       icon: RiMailAddFill,
-      href: "https://gmail.com",
+      href: "mailto:abhimanyu1992002@gmail.com",
       handle: "Abhimanyu",
       label: "mail",
     },

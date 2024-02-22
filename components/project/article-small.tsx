@@ -2,10 +2,12 @@ import React, { useEffect, useState } from "react";
 import { ExploreButton } from "./explore-button";
 import { FaGithub } from "react-icons/fa";
 import Link from "next/link";
+import { Button } from "../ui/button";
 
 type ArticleSmallProps = {
   project: {
-    slug: string;
+    demo?: string;
+    github: string;
     title: string;
     description: string;
   };
@@ -23,11 +25,23 @@ export const ArticleSmall = ({ project }: ArticleSmallProps) => {
           <p className="z-20 mt-4 text-sm  duration-1000 text-zinc-400 group-hover:text-zinc-200">
             {project.description}
           </p>
-          <div className="flex mt-4 gap-4">
-            <Link href={"/"} className="group/link">
-              <FaGithub className="w-6 h-6 group-hover/link:text-white/80" />
-            </Link>
-            <Link href={"/"}>Demo</Link>
+          <div className="mt-4 flex justify-between ">
+            <Button variant={"secondary"} asChild>
+              <Link href={project.github} target="_blank">
+                Github
+              </Link>
+            </Button>
+            {project.demo && (
+              <Button variant={"link"} asChild>
+                <Link
+                  target="_blank"
+                  href={project.demo}
+                  className="text-white"
+                >
+                  Demo
+                </Link>
+              </Button>
+            )}
           </div>
         </article>
       </div>

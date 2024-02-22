@@ -1,87 +1,65 @@
 export const sorted = [
   {
-    title: "Notion Clone",
+    title: "Advanced Auth",
     description:
-      "Unkey is an open source API Key management solution. It allows you to create, manage and validate API Keys for your users. It’s built with security and speed in mind.",
-    slug: "rgerbgber",
+      "🚀 Advanced-Authentication helps developers kick-start a NextJS application with industry-level authentication using the Next-auth v5 library.",
+    github: "https://github.com/Abhi1992002/Advanced-Authentication",
+    demo: "https://auth.abhimanyu.tech",
   },
   {
-    title: "Task Management App",
+    title: "Video Call Application (Google Meet)",
     description:
-      "A task management application that helps you organize your tasks efficiently. It includes features such as task prioritization, deadlines, and progress tracking.",
-    slug: "task-management-app",
+      "This is a video call application (uses same design as google meet), created using WebRTC, HTML, CSS, and JS. This is based on mesh architecture not SFU, so it can't handle many users.",
+    github: "https://github.com/Abhi1992002/video_chat/tree/main",
+    demo: "https://video-discussion.netlify.app/action.html",
   },
   {
-    title: "Budget Tracker",
+    title: "Cab Booking",
     description:
-      "A simple budget tracking tool to help you manage your finances. It allows you to track your income, expenses, and savings over time.",
-    slug: "budget-tracker",
+      "cab_booking 🚗 built with the Mapbox API, featuring seamless address search, and real-time estimates of travel time and duration. Navigate your city effortlessly, finding the best routes and cabs with just a few clicks.",
+    github: "https://github.com/Abhi1992002/cab_booking",
+    demo: "https://cab.abhimanyu.tech",
   },
   {
-    title: "Recipe Organizer",
+    title: "Galaxy generator",
     description:
-      "An application for organizing and storing your favorite recipes. You can categorize recipes by cuisine, ingredients, or meal type.",
-    slug: "recipe-organizer",
+      "🪐 galaxy_generator is a creative website built with THREE.js particles, allowing you to design galaxies by tweaking colour , randomness and more..",
+    demo: "https://galaxy.abhimanyu.tech",
+    github: "https://github.com/Abhi1992002/galaxy_generator",
+  },
+
+  {
+    title: "Scalable Chat App (Still Working)",
+    description:
+      "This is a Scalable chat application, created using web sockets, redis , kafka.js , postgres and NextJS.",
+    github: "https://github.com/Abhi1992002/scalable_chat_application",
   },
   {
-    title: "Fitness Tracker",
+    title: "Cli for advanced auth",
     description:
-      "Track your fitness goals and progress with this fitness tracker app. Log workouts, monitor your calorie intake, and set personal fitness goals.",
-    slug: "fitness-tracker",
-  },
-  {
-    title: "Event Planner",
-    description:
-      "Plan and organize events effortlessly with this event planner app. Manage guest lists, create schedules, and send invitations.",
-    slug: "event-planner",
-  },
-  {
-    title: "Language Learning Platform",
-    description:
-      "A platform for learning new languages with interactive lessons, quizzes, and progress tracking. Start your language learning journey today!",
-    slug: "language-learning-platform",
-  },
-  {
-    title: "Stock Portfolio Tracker",
-    description:
-      "Keep track of your stock portfolio performance with this intuitive portfolio tracker. Monitor stock prices, dividends, and overall portfolio value.",
-    slug: "stock-portfolio-tracker",
-  },
-  {
-    title: "Blog Platform",
-    description:
-      "Start your own blog with this customizable blogging platform. Share your thoughts, stories, and ideas with the world.",
-    slug: "blog-platform",
-  },
-  {
-    title: "Project Management Tool",
-    description:
-      "Manage projects efficiently with this project management tool. Assign tasks, track progress, and collaborate with team members. ",
-    slug: "project-management-tool ",
-  },
-  {
-    title: "Project Management Tool",
-    description:
-      "Manage projects efficiently with this project management tool. Assign tasks, track progress, and collaborate with team members.",
-    slug: "project-management-tool",
+      "I have created a simple cli so it will be easy for me to start intial folder for my application ",
+    github: "https://github.com/Abhi1992002/cli",
   },
 ];
 
 export const top1 = {
-  slug: "2184y28934y2b",
-  title: "Scalable Chat Application",
-  description:
-    "Unkey is an open source API Key management solution. It allows you to create, manage and validate API Keys for your users. It’s built with security and speed in mind.",
+  github: "https://github.com/Abhi1992002/cloud_storage",
+  demo: "https://cloud.abhimanyu.tech",
+  title: "cloud-storage",
+  description: `
+   cloud_storage 🌥️ is a cloud storage platform like Google Drive but built with edgeStore. Perfect for storing all your important stuff online! 🚀. You only get 150 mb of free storage , for more you need to upgrade .It is built on edgestore.It help me to upload multiple files
+   `,
 };
 export const top2 = {
-  slug: "2184y28934y2b",
-  title: "Scalable Chat Application",
+  github: "https://github.com/Abhi1992002/course-gpt",
+  demo: "https://course-gpt.vercel.app",
+  title: "course-gpt",
   description:
-    "Unkey is an open source API Key management solution. It allows you to create, manage and validate API Keys for your users. It’s built with security and speed in mind.",
+    "course-gpt 🤖 combines OpenAI API, YouTube API, and Unsplash API to enable easy course creation. Transform ideas into educational content with AI assistance and rich media integration.",
 };
 export const top3 = {
-  slug: "2184y28934y2b",
-  title: "Scalable Chat Application",
-  description:
-    "Unkey is an open source API Key management solution. It allows you to create, manage and validate API Keys for your users. It’s built with security and speed in mind.",
+  title: "Notion Clone",
+  description: "A custom Notion clone 📘 using Next.js and Convex",
+  github: "https://github.com/Abhi1992002/notion_clone",
+  demo: "https://notion-clone-nine-blue.vercel.app",
 };

@@ -15,7 +15,7 @@ export const ProjectContent = ({}: ProjectContentProps) => {
       <div className="grid grid-cols-1 gap-8 mx-auto lg:grid-cols-2  bg-black">
         <Card>
           <div className="xl:block hidden">
-            <Article project={top1} />
+            <Article project={top1} top1={true} />
           </div>
           <div className="xl:hidden block">
             <ArticleSmall project={top1} />
@@ -23,11 +23,11 @@ export const ProjectContent = ({}: ProjectContentProps) => {
         </Card>
         <div className="flex flex-col w-full gap-8 mx-auto border-t border-gray-900/10 lg:mx-0 lg:border-t-0 ">
           {[top2, top3].map((project) => (
-            <Card key={project.slug}>
-              <div className="xl:block hidden">
+            <Card key={project.github}>
+              <div className="xl:block hidden relative">
                 <Article project={project} />
               </div>
-              <div className="xl:hidden block">
+              <div className="xl:hidden block relative">
                 <ArticleSmall project={project} />
               </div>
             </Card>
@@ -46,11 +46,11 @@ export const ProjectContent = ({}: ProjectContentProps) => {
             {sorted
               .filter((_, i) => i % 3 === 0)
               .map((project) => (
-                <Card key={project.slug}>
-                  <div className="xl:block hidden">
+                <Card key={project.github}>
+                  <div className="xl:block hidden relative">
                     <Article project={project} />
                   </div>
-                  <div className="xl:hidden block">
+                  <div className="xl:hidden block relative">
                     <ArticleSmall project={project} />
                   </div>
                 </Card>
@@ -60,11 +60,11 @@ export const ProjectContent = ({}: ProjectContentProps) => {
             {sorted
               .filter((_, i) => i % 3 === 1)
               .map((project) => (
-                <Card key={project.slug}>
-                  <div className="xl:block hidden">
+                <Card key={project.github}>
+                  <div className="xl:block hidden relative">
                     <Article project={project} />
                   </div>
-                  <div className="xl:hidden block">
+                  <div className="xl:hidden block relative">
                     <ArticleSmall project={project} />
                   </div>
                 </Card>
@@ -74,11 +74,11 @@ export const ProjectContent = ({}: ProjectContentProps) => {
             {sorted
               .filter((_, i) => i % 3 === 2)
               .map((project) => (
-                <Card key={project.slug}>
-                  <div className="xl:block hidden">
+                <Card key={project.github}>
+                  <div className="xl:block hidden relative">
                     <Article project={project} />
                   </div>
-                  <div className="xl:hidden block">
+                  <div className="xl:hidden block relative">
                     <ArticleSmall project={project} />
                   </div>
                 </Card>
