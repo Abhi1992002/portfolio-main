@@ -1,12 +1,18 @@
 import type { Metadata } from "next";
-import { Iceland, Inter, Michroma, Orbitron, Space_Grotesk } from "next/font/google";
+import {
+  Iceland,
+  Inter,
+  Michroma,
+  Orbitron,
+  Space_Grotesk,
+} from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
 import { Provider } from "@/components/providers";
 
 const inter = Inter({ subsets: ["latin"] });
-const orb = Orbitron({ subsets: ["latin"] })
-const space = Space_Grotesk({ subsets: ["latin"] })
+const orb = Orbitron({ subsets: ["latin"] });
+const space = Space_Grotesk({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -18,14 +24,13 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-
   return (
     <html lang="en">
-      <body className={`${space.className} w-screen overflow-x-hidden scroller`}>
-        <Provider>
-        {children}
-        </Provider>
-       </body>
+      <body
+        className={`${space.className} w-screen overflow-x-hidden scroller`}
+      >
+        <Provider>{children}</Provider>
+      </body>
     </html>
   );
 }

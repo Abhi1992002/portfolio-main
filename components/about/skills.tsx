@@ -44,78 +44,102 @@ import {
 import { GrGraphQl } from "react-icons/gr";
 import { DiMysql } from "react-icons/di";
 import { RiOpenaiFill } from "react-icons/ri";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
+} from "@/components/ui/tooltip";
+import Ripple from "../magicui/ripple";
+
 type SkillsProps = {};
+
+const skillsData = {
+  frontend: [
+    { Icon: FaReact, name: "React" },
+    { Icon: TbBrandNextjs, name: "Next.js" },
+    { Icon: SiRemix, name: "Remix" },
+    { Icon: SiTailwindcss, name: "Tailwind CSS" },
+    { Icon: FaHtml5, name: "HTML5" },
+    { Icon: FaCss3Alt, name: "CSS3" },
+    { Icon: SiReacthookform, name: "React Hook Form" },
+    { Icon: SiAxios, name: "Axios" },
+    { Icon: SiReactquery, name: "React Query" },
+    { Icon: "Next-auth", name: "NextAuth.js" },
+    { Icon: "clerk", name: "Clerk" },
+    { Icon: IoLogoJavascript, name: "JavaScript" },
+    { Icon: SiTypescript, name: "TypeScript" },
+    { Icon: SiMui, name: "Material-UI" },
+    { Icon: SiRecoil, name: "Recoil" },
+    { Icon: SiVite, name: "Vite" },
+    { Icon: FaFigma, name: "Figma" },
+    { Icon: FiFramer, name: "Framer Motion" },
+    { Icon: "GSAP", name: "GSAP" },
+    { Icon: TbBrandThreejs, name: "Three.js" },
+  ],
+  backend: [
+    { Icon: FaNodeJs, name: "Node.js" },
+    { Icon: GrGraphQl, name: "GraphQL" },
+    { Icon: "Convex", name: "Convex" },
+    { Icon: SiTrpc, name: "tRPC" },
+    { Icon: SiPostgresql, name: "PostgreSQL" },
+    { Icon: SiMongodb, name: "MongoDB" },
+    { Icon: "Web Sockets", name: "Web Sockets" },
+    { Icon: DiMysql, name: "MySQL" },
+    { Icon: SiPrisma, name: "Prisma" },
+    { Icon: "Drizzle", name: "Drizzle" },
+    { Icon: SiWebrtc, name: "WebRTC" },
+    { Icon: SiApollographql, name: "Apollo GraphQL" },
+    { Icon: "server actions", name: "Server Actions" },
+    { Icon: FaAws, name: "AWS" },
+    { Icon: RiOpenaiFill, name: "OpenAI" },
+    { Icon: FaDigitalOcean, name: "DigitalOcean" },
+    { Icon: SiVercel, name: "Vercel" },
+    { Icon: SiNginx, name: "Nginx" },
+  ],
+  common: [
+    { Icon: "C language", name: "C" },
+    { Icon: FaPython, name: "Python" },
+    { Icon: SiJsonwebtokens, name: "JSON Web Tokens" },
+    { Icon: FaDocker, name: "Docker" },
+    { Icon: SiZod, name: "Zod" },
+    { Icon: SiGithubactions, name: "GitHub Actions" },
+    { Icon: "ngork", name: "ngrok" },
+    { Icon: FaStripe, name: "Stripe" },
+    { Icon: FaGit, name: "Git" },
+    { Icon: SiJest, name: "Jest" },
+    { Icon: FaNpm, name: "npm" },
+    { Icon: SiPnpm, name: "pnpm" },
+  ],
+};
 
 export const Skills = ({}: SkillsProps) => {
   return (
-    <div className="w-full flex justify-center  pb-20 relative">
-      <div className="w-[95%] sm:w-[80%] my-24">
-        <div className="p-2 flex flex-col justify-start items-center">
-          <h1 className=" text-xl">Frontend</h1>
-          <div className="flex pt-4 gap-2 sm:gap-4 flex-wrap justify-center">
-            <SkillBox Icon={FaReact} />
-            <SkillBox Icon={TbBrandNextjs} />
-            <SkillBox Icon={SiRemix} />
-            <SkillBox Icon={SiTailwindcss} />
-            <SkillBox Icon={FaHtml5} />
-            <SkillBox Icon={FaCss3Alt} />
-            <SkillBox Icon={SiReacthookform} />
-            <SkillBox Icon={SiAxios} />
-            <SkillBox Icon={SiReactquery} />
-            <SkillBox Icon={"Next-auth"} />
-            <SkillBox Icon={"clerk"} />
-            <SkillBox Icon={IoLogoJavascript} />
-            <SkillBox Icon={SiTypescript} />
-            <SkillBox Icon={SiMui} />
-            <SkillBox Icon={SiRecoil} />
-            <SkillBox Icon={SiVite} />
-            <SkillBox Icon={FaFigma} />
-            <SkillBox Icon={FiFramer} />
-            <SkillBox Icon={"GSAP"} />
-            <SkillBox Icon={TbBrandThreejs} />
-          </div>
-        </div>
-        <div className="p-2 flex flex-col justify-start items-center mt-14">
-          <h1 className=" text-xl">Backend</h1>
-          <div className="flex pt-4 gap-4 flex-wrap justify-center">
-            <SkillBox Icon={FaNodeJs} />
-            <SkillBox Icon={GrGraphQl} />
-            <SkillBox Icon={"Convex"} />
-            <SkillBox Icon={SiTrpc} />
-            <SkillBox Icon={SiPostgresql} />
-            <SkillBox Icon={SiMongodb} />
-            <SkillBox Icon={"Web Sockets"} />
-            <SkillBox Icon={DiMysql} />
-            <SkillBox Icon={SiPrisma} />
-            <SkillBox Icon={"Drizzle"} />
-            <SkillBox Icon={SiWebrtc} />
-            <SkillBox Icon={SiApollographql} />
-            <SkillBox Icon={"server actions"} />
-            <SkillBox Icon={FaAws} />
-            <SkillBox Icon={RiOpenaiFill} />
-            <SkillBox Icon={FaDigitalOcean} />
-            <SkillBox Icon={SiVercel} />
-            <SkillBox Icon={SiNginx} />
-          </div>
-        </div>
+    <div className="w-full flex justify-center  pb-20  relative">
+      <div className="w-[95%] sm:w-[80%] my-12">
+        {Object.entries(skillsData).map(([category, skills]) => (
+          <div
+            key={category}
+            className="p-2 flex flex-col justify-start items-center mt-14"
+          >
+            <h1 className="text-xl text-white capitalize">{category}</h1>
 
-        <div className="p-2 flex flex-col justify-start items-center mt-14">
-          <h1 className=" text-xl">Common</h1>
-          <div className="flex pt-4 gap-4 flex-wrap justify-center">
-            <SkillBox Icon={"C language"} />
-            <SkillBox Icon={FaPython} />
-            <SkillBox Icon={SiJsonwebtokens} />
-            <SkillBox Icon={FaDocker} />
-            <SkillBox Icon={SiZod} />
-            <SkillBox Icon={SiGithubactions} />
-            <SkillBox Icon={"ngork"} />
-            <SkillBox Icon={FaStripe} />
-            <SkillBox Icon={FaGit} />
-            <SkillBox Icon={SiJest} />
-            <SkillBox Icon={FaNpm} />
-            <SkillBox Icon={SiPnpm} />
+            <div className="flex pt-4 gap-2 sm:gap-4 flex-wrap justify-center">
+              {skills.map((skill, index) => (
+                <TooltipProvider key={index}>
+                  <Tooltip>
+                    <TooltipTrigger>
+                      <SkillBox Icon={skill.Icon} />
+                    </TooltipTrigger>
+                    <TooltipContent>
+                      <p>{skill.name}</p>
+                    </TooltipContent>
+                  </Tooltip>
+                </TooltipProvider>
+              ))}
+            </div>
           </div>
-        </div>
+        ))}
       </div>
     </div>
   );

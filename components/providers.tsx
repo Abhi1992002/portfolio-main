@@ -9,9 +9,9 @@ type ProviderProps = {
 export const Provider = ({ children }: ProviderProps) => {
   return (
     <>
-      <ReactLenis root options={{ lerp: 0.1, duration: 2, smoothTouch: true }}>
-        {children}
-      </ReactLenis>
+      {/* <ReactLenis root options={{ lerp: 0.1, duration: 2, smoothTouch: true }}> */}
+      {children}
+      {/* </ReactLenis> */}
     </>
   );
 };
